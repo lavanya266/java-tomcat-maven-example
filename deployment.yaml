@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mymavenapp
+  name: javaapp
   labels:
-    app: mymavenapp
+    app: javaapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mymavenapp
+      app: javaapp
   template:
     metadata:
       labels:
-        app: mymavenapp
+        app: javaapp
     spec:
       containers:
-      - name: mymavenapp
-        image: bharathac5775/mymavenapp:v1  # Replace with your actual image name and tag
+      - name: javaapp
+        image: lavanya986/javaapp:v1  # Replace with your actual image name and tag
         ports:
         - containerPort: 8080  # Assuming the Java application runs on port 8080, adjust if needed
         env:
